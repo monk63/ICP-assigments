@@ -27,7 +27,7 @@ int **ptr = new int *[i];
             cout<<ptr[j][k]<<" ";
         }
 
-  /*  int searchValidEntries()  {
+  /*  int searchValidEntries()  
         
     }  
     */
