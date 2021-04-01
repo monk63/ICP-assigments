@@ -1,15 +1,17 @@
+/*  Michael Ofori
+    Dickson Akubia
+    Lab 9 Assignment
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <bits/stdc++.h>
-#define MAXX 101
 #define endl "\n"
 #define fastIo                        \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);
-
 using namespace std;
-
-int A[MAXX][MAXX];
+int A[101][101];
 void seachValidEntries(int xl, int yl, int xm, int ym)
 {
     int count = 0;
@@ -34,8 +36,8 @@ void populateArray(int N)
     srand((unsigned)time(NULL));
     for (int i{}; i < N; i++)
     {
-        int p = 0 + (rand() % 50);
-        int q = 0 + (rand() % 50);
+        int p = 0 + (rand() % 100);
+        int q = 0 + (rand() % 100);
         if (A[p][q] == -1)
         {
             A[p][q] = 1;
@@ -44,7 +46,7 @@ void populateArray(int N)
         {
             A[p][q] += 1;
         }
-        // cout << p << " " << q << endl;
+       //  cout << p << " " << q << endl;
     }
 }
 void printArray(int xl, int yl, int xm, int ym)
@@ -60,7 +62,7 @@ void printArray(int xl, int yl, int xm, int ym)
 }
 int main()
 {
-    //fastIo;
+    
     memset(A, -1, sizeof(A));
     int N = 2000;
     populateArray(N);
@@ -84,7 +86,7 @@ int main()
             break;
             return 0;
         }
-        //! uncomment it to see what is bounded box looking now
+        
          printArray(xl, yl, xm, ym);
           cout<<endl;
         seachValidEntries(xl, yl, xm, ym);
@@ -93,10 +95,11 @@ int main()
 }
 //input
 
-// 5
-// 80 1 100 10
-// 10 20 40 79
-// 1 90 100 100
-// 40 30 70 60
-// 50 50 70 70
-//
+/*
+5
+80 1 100 10
+10 20 40 79
+1 90 100 100
+40 30 70 60
+50 50 70 70
+*/
