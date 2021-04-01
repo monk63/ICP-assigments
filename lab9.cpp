@@ -11,7 +11,13 @@
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);
 using namespace std;
+
+//An array A[101][101]
 int A[101][101];
+/*
+seachValidEntries that takes the values of the coordinates of the corners of the bounding box and reports the
+indices and counts of the entries in
+*/
 void seachValidEntries(int xl, int yl, int xm, int ym)
 {
     int count = 0;
