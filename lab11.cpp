@@ -7,7 +7,7 @@
  */ 
 
 #include <stdio.h>
-#include <algorithm>
+#include <algorithm> //required for sorting vector<> class
 #include <stdlib.h>
 #include <bits/stdc++.h>
 #define MAXX 1000
